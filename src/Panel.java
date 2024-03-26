@@ -5,6 +5,8 @@ import java.awt.event.KeyListener;
 
 public class Panel extends JPanel implements KeyListener {
     static int windowWidth = 800;
+    private long lastCheck = 0;
+    private int frames = 0;
     static int windowHeight = (windowWidth/16) * 9;
     public Panel(){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
@@ -13,6 +15,14 @@ public class Panel extends JPanel implements KeyListener {
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
+        frames++;
+        if(System.currentTimeMillis() - lastCheck >= 1000){
+            lastCheck = System.currentTimeMillis();
+            System.out.println("Fps: "+frames);
+            frames = 0;
+        }
+    }
+    public void updateGame (){
     }
     static boolean playerDown, playerUp, playerRight, playerLeft;
 
