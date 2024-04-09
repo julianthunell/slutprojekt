@@ -4,17 +4,25 @@ public class Game implements Runnable {
     private Thread gameThread;
     private final int fps = 60;
     private final int ups = 120;
+    Player player = new Player(100,100,50,100);
 
     public Game(){
-        panel = new Panel();
+        panel = new Panel(player);
         window = new Window(panel);
         panel.requestFocus();
         startGameloop();
+    }
+    private void updateGame() {
+        gamePhysics();
     }
 
     private void startGameloop(){
         gameThread = new Thread(this);
         gameThread.start();
+    }
+
+    private void gamePhysics(){
+        //player.y -=1;
     }
 
     //game loop
@@ -34,7 +42,7 @@ public class Game implements Runnable {
 
             //update
             if(now - lastUpdate >= timePerUpdate){
-                panel.updateGame();
+                updateGame();
                 lastUpdate = now;
             }
 
@@ -45,4 +53,5 @@ public class Game implements Runnable {
             }
         }
     }
+
 }

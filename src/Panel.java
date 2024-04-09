@@ -8,10 +8,11 @@ public class Panel extends JPanel implements KeyListener {
     private long lastCheck = 0;
     private int frames = 0;
     static int windowHeight = (windowWidth/16) * 9;
-    public Panel(){
+    Player player;
+    public Panel(Player player){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
         this.addKeyListener(this);
-
+        this.player = player;
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -21,8 +22,8 @@ public class Panel extends JPanel implements KeyListener {
             System.out.println("Fps: "+frames);
             frames = 0;
         }
-    }
-    public void updateGame (){
+
+        g.fillRect(player.x,100,100,100);
     }
     static boolean playerDown, playerUp, playerRight, playerLeft;
 

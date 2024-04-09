@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="Game loop klar update och render">
-      <change afterPath="$PROJECT_DIR$/src/movingObject.java" afterDir="false" />
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="Game loop klar update och render + moving object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/movingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +79,10 @@
       <workItem from="1710752967323" duration="3388000" />
       <workItem from="1710853061302" duration="2476000" />
       <workItem from="1711443988260" duration="361000" />
-      <workItem from="1711457704360" duration="2978000" />
+      <workItem from="1711457704360" duration="3015000" />
+      <workItem from="1711918142626" duration="20000" />
+      <workItem from="1712562824420" duration="4242000" />
+      <workItem from="1712663994888" duration="3107000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -103,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711459016293</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Game loop klar update och render + moving object">
+      <option name="closed" value="true" />
+      <created>1711461277936</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1711461277936</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +126,8 @@
     <MESSAGE value="Första commit" />
     <MESSAGE value="Basic struktur" />
     <MESSAGE value="Game loop klar update och render" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game loop klar update och render" />
+    <MESSAGE value="Game loop klar update och render + moving object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Game loop klar update och render + moving object" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/slutprojekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1710755468027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
