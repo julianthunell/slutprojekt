@@ -5,9 +5,10 @@ public class Game implements Runnable {
     private final int fps = 60;
     private final int ups = 120;
     Player player = new Player(100,100,50,100);
+    Enemy enemy = new Enemy(200,100,50,100);
 
     public Game(){
-        panel = new Panel(player);
+        panel = new Panel(player,enemy);
         window = new Window(panel);
         panel.requestFocus();
         startGameloop();
@@ -22,7 +23,7 @@ public class Game implements Runnable {
     }
 
     private void gamePhysics(){
-        //player.y -=1;
+
     }
 
     //game loop

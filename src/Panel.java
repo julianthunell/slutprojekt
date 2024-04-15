@@ -9,10 +9,12 @@ public class Panel extends JPanel implements KeyListener {
     private int frames = 0;
     static int windowHeight = (windowWidth/16) * 9;
     Player player;
-    public Panel(Player player){
+    Enemy enemy;
+    public Panel(Player player, Enemy enemy){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
         this.addKeyListener(this);
         this.player = player;
+        this.enemy = enemy;
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -23,7 +25,8 @@ public class Panel extends JPanel implements KeyListener {
             frames = 0;
         }
 
-        g.fillRect(player.x,100,100,100);
+        g.fillRect(player.x,player.y,100,100);
+        g.fillRect(500,enemy.y,100,100);
     }
     static boolean playerDown, playerUp, playerRight, playerLeft;
 

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="Game loop klar update och render + moving object">
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="ingenting">
+      <change afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +51,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -83,6 +88,12 @@
       <workItem from="1711918142626" duration="20000" />
       <workItem from="1712562824420" duration="4242000" />
       <workItem from="1712663994888" duration="3107000" />
+      <workItem from="1712667297100" duration="79000" />
+      <workItem from="1712668749043" duration="259000" />
+      <workItem from="1712845716985" duration="10000" />
+      <workItem from="1713168903235" duration="119000" />
+      <workItem from="1713169113194" duration="2492000" />
+      <workItem from="1713171851259" duration="17000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -116,7 +127,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711461277936</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ingenting">
+      <option name="closed" value="true" />
+      <created>1712667354536</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712667354536</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,7 +146,8 @@
     <MESSAGE value="Basic struktur" />
     <MESSAGE value="Game loop klar update och render" />
     <MESSAGE value="Game loop klar update och render + moving object" />
-    <option name="LAST_COMMIT_MESSAGE" value="Game loop klar update och render + moving object" />
+    <MESSAGE value="ingenting" />
+    <option name="LAST_COMMIT_MESSAGE" value="ingenting" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/slutprojekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1710755468027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
