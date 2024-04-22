@@ -4,12 +4,16 @@ public class movingObject {
     float y;
 
     //size of the object
-    int width;
-    int height;
-    public movingObject(int x, int y, int width, int height){
+    float width;
+    float height;
+
+    //other chaectheristics
+    char objectDir;
+    public movingObject(float x, float y, float width, float height, char objectDir){
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        this.objectDir = objectDir;
     }
 }

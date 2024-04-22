@@ -1,24 +1,47 @@
 public class Player extends movingObject{
-    protected boolean down,up,left,right;
-    private float speed = 2;
-    public Player(int x, int y, int width, int height) {
-        super(x, y, width, height);
+    protected boolean down,up,left,right,dash;
+    private float yVel,xVel;
+    private float maxVel = 4.0F;
+    final int groundLevel = 300;
+
+    public Player(float x, float y, int width, int height, char objectDir) {
+        super(x, y, width, height,objectDir);
     }
 
     public void update(){
         playerMove();
     }
     private void playerMove(){
-        //Gravity and jumping
-
-
+        //Gravity
+        if(yVel < maxVel){
+            yVel += 0.04F;
+        }
+        //stopping player when touching ground
+        if (!canMove("down")){
+            yVel = 0;
+        }
         //left right movement
-        if(left && !right && canMove("left")){
-            x -= speed;
+        if(left){
+            xVel -= 0.04F;
         }
-        if(right && !left  && canMove("right")){
-            x += speed;
+        if(right){
+            xVel += 0.04F;
         }
+        //Jump
+        if(up){
+            yVel = - 2;
+        }
+        //dash
+        if(dash && objectDir=='R' )
+            xVel += 0.2F;
+        else if (dash && objectDir=='L') {
+            xVel -= 0.2F;
+        }
+
+        y += yVel;
+        x += xVel;
+
+
 
     }
     //checks if player can move to chosen direction
@@ -33,11 +56,7 @@ public class Player extends movingObject{
                     return false;
                 break;
             case "down":
-                if (y >= Panel.windowHeight-height)
-                    return false;
-                break;
-            case "up":
-                if (y >= 0)
+                if (y >= groundLevel+height)
                     return false;
                 break;
         }

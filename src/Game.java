@@ -4,8 +4,8 @@ public class Game implements Runnable {
     private Thread gameThread;
     private final int fps = 60;
     private final int ups = 120;
-    Player player = new Player(100,100,26,50);
-    Enemy enemy = new Enemy(200,100,50,100);
+    Player player = new Player((Panel.windowWidth/2)-13,100,26,50,'R');
+    Enemy enemy = new Enemy(200,100,50,100,'R');
 
     //Creating Gamewindow and Gamepanel
     //Sending the objects
