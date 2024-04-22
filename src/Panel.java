@@ -25,11 +25,8 @@ public class Panel extends JPanel implements KeyListener {
             frames = 0;
         }
 
-        g.fillRect(player.x,player.y,100,100);
-        g.fillRect(500,enemy.y,100,100);
+        g.fillRect((int)player.x, (int)player.y,player.width,player.height);
     }
-    static boolean playerDown, playerUp, playerRight, playerLeft;
-
 
     public void keyTyped(KeyEvent e) {
 
@@ -39,39 +36,38 @@ public class Panel extends JPanel implements KeyListener {
         int input = (e.getKeyCode());
         System.out.println(e.getKeyCode());
 
-        //startar movement när knapp trycks
+        //starts movement depending on direction
         switch (input){
             case 87:
-                playerUp =true;
-                System.out.println("test");
+                player.up = true;
                 break;
             case 83:
-                playerDown=true;
+                player.down = true;
                 break;
             case 65:
-                playerLeft =true;
+                player.left = true;
                 break;
             case 68:
-                playerRight =true;
+                player.right = true;
                 break;
         }
-        //other
     }
+
+    //stops movement depending on direction
     public void keyReleased(KeyEvent e) {
-        //stänger av movement när knapp släpps
         int input = (e.getKeyCode());
         switch (input) {
             case 87:
-                playerUp = false;
+                player.up = false;
                 break;
             case 83:
-                playerDown = false;
+                player.down = false;
                 break;
             case 65:
-                playerLeft = false;
+                player.left = false;
                 break;
             case 68:
-                playerRight = false;
+                player.right = false;
                 break;
         }
     }
