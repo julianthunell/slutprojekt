@@ -25,7 +25,7 @@ public class Panel extends JPanel implements KeyListener {
             frames = 0;
         }
 
-        g.fillRect((int)player.x, (int)player.y,player.width,player.height);
+        g.fillRect((int)player.x,(int)player.y,(int)player.width,(int)player.height);
     }
 
     public void keyTyped(KeyEvent e) {
@@ -34,8 +34,7 @@ public class Panel extends JPanel implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
         int input = (e.getKeyCode());
-        System.out.println(e.getKeyCode());
-
+        System.out.println(input);
         //starts movement depending on direction
         switch (input){
             case 87:
@@ -46,9 +45,14 @@ public class Panel extends JPanel implements KeyListener {
                 break;
             case 65:
                 player.left = true;
+                player.objectDir = 'L';
                 break;
             case 68:
                 player.right = true;
+                player.objectDir = 'R';
+                break;
+            case 32:
+                player.dash = true;
                 break;
         }
     }
@@ -68,6 +72,9 @@ public class Panel extends JPanel implements KeyListener {
                 break;
             case 68:
                 player.right = false;
+                break;
+            case 32:
+                player.dash = false;
                 break;
         }
     }
