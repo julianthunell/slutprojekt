@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="bättre implementation av movement">
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="ännu bättre implementation av movement">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/movingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +22,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;julianthunell&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="467adbb4-5d35-4a95-9282-a7a279c6118e" />
+        <option name="url" value="https://github.com/julianthunell/slutprojekt.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -99,7 +109,8 @@
       <workItem from="1713269265571" duration="2870000" />
       <workItem from="1713710076595" duration="90000" />
       <workItem from="1713773404871" duration="3188000" />
-      <workItem from="1713782482083" duration="9537000" />
+      <workItem from="1713782482083" duration="10092000" />
+      <workItem from="1713872892385" duration="2293000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -157,7 +168,23 @@
       <option name="project" value="LOCAL" />
       <updated>1713784037458</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ännu bättre implementation av movement">
+      <option name="closed" value="true" />
+      <created>1713792653674</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713792653674</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ännu bättre implementation av movement">
+      <option name="closed" value="true" />
+      <created>1713792666342</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713792666342</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,7 +198,8 @@
     <MESSAGE value="ingenting" />
     <MESSAGE value="ingen större ändring" />
     <MESSAGE value="bättre implementation av movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="bättre implementation av movement" />
+    <MESSAGE value="ännu bättre implementation av movement" />
+    <option name="LAST_COMMIT_MESSAGE" value="ännu bättre implementation av movement" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/slutprojekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1710755468027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

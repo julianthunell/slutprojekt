@@ -12,6 +12,7 @@ public class Player extends movingObject{
         playerMove();
     }
     private void playerMove(){
+        y += yVel;
         //Gravity
         if(yVel < maxVel){
             yVel += 0.04F;
@@ -19,30 +20,25 @@ public class Player extends movingObject{
         //stopping player when touching ground
         if (!canMove("down")){
             yVel = 0;
+
         }
         //left right movement
         if(left){
-            xVel -= 0.04F;
+            x -= 2F;
         }
         if(right){
-            xVel += 0.04F;
+            x += 2F;
         }
         //Jump
-        if(up){
-            yVel = - 2;
+        if(up && canMove("up")){
+            yVel = - 3;
+            if (right){
+                x+=2;
+            }
+            if (left){
+                x-=2;
+            }
         }
-        //dash
-        if(dash && objectDir=='R' )
-            xVel += 0.2F;
-        else if (dash && objectDir=='L') {
-            xVel -= 0.2F;
-        }
-
-        y += yVel;
-        x += xVel;
-
-
-
     }
     //checks if player can move to chosen direction
     private boolean canMove(String direction){
@@ -58,6 +54,13 @@ public class Player extends movingObject{
             case "down":
                 if (y >= groundLevel+height)
                     return false;
+                break;
+            case "up":
+                System.out.println("tset");
+                if (y < groundLevel+height-1) {
+                    System.out.println(y);
+                    return false;
+                }
                 break;
         }
         return true;
