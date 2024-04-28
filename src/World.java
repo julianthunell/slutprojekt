@@ -1,4 +1,4 @@
-public class World {
+public class World{
 
     //Variables for world
     int floorLevel;

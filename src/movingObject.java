@@ -1,4 +1,4 @@
-public abstract class movingObject {
+public abstract class movingObject extends AnimatedObject {
     //x and y position of the object
     float x;
     float y;
@@ -7,7 +7,7 @@ public abstract class movingObject {
     float width;
     float height;
 
-    //other chaectheristics
+    //other characteristics
     char objectDir;
     World world;
     public movingObject(float x, float y, int width, int height, char objectDir, World world){
@@ -20,6 +20,7 @@ public abstract class movingObject {
 
     }
     //checks if object can move to chosen direction
+    //Works by checking the current position of the object and seeing if it's outside the screen
     public boolean canMove(String direction){
         switch (direction){
             case "left":
@@ -42,7 +43,7 @@ public abstract class movingObject {
         }
         return true;
     }
-    //updates the
+    //update function for logic
     public abstract void update();
 
 }

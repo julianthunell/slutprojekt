@@ -1,4 +1,4 @@
-public class Player extends movingObject{
+public class Player extends livingEntity{
     protected boolean down,up,left,right,dash;
     private float yVel,xVel;
     private float maxVel = 4.0F;
@@ -33,5 +33,10 @@ public class Player extends movingObject{
         if(up && canMove("up")){
             yVel = - 3;
         }
+    }
+
+    @Override
+    public void setStringLocation() {
+
     }
 }
