@@ -10,22 +10,33 @@ public class Panel extends JPanel implements KeyListener {
     static int windowHeight = (windowWidth/16) * 9;
     Player player;
     Enemy enemy;
-    public Panel(Player player, Enemy enemy){
+
+    World world;
+    public Panel(Player player, Enemy enemy, World world){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
         this.addKeyListener(this);
         this.player = player;
         this.enemy = enemy;
+        this.world = world;
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
+        fps();
+
+        //draws player
+        g.fillRect((int)player.x,(int)player.y,(int)player.width,(int)player.height);
+
+        //draws world
+        g.fillRect(0, world.floorLevel, windowWidth,10);
+
+    }
+    public void fps(){
         frames++;
         if(System.currentTimeMillis() - lastCheck >= 1000){
             lastCheck = System.currentTimeMillis();
             System.out.println("Fps: "+frames);
             frames = 0;
         }
-
-        g.fillRect((int)player.x,(int)player.y,(int)player.width,(int)player.height);
     }
 
     public void keyTyped(KeyEvent e) {
@@ -34,7 +45,6 @@ public class Panel extends JPanel implements KeyListener {
 
     public void keyPressed(KeyEvent e) {
         int input = (e.getKeyCode());
-        System.out.println(input);
         //starts movement depending on direction
         switch (input){
             case 87:
