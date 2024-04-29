@@ -13,10 +13,10 @@ public class Game implements Runnable {
     //Sending the objects
     //starting the game
     public Game(){
+        startAnimationOjects();
         panel = new Panel(player,enemy,world);
         window = new Window(panel);
         panel.requestFocus();
-        startAnimationOjects();
         startGameloop();
     }
 

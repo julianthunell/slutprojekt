@@ -10,7 +10,6 @@ public class Panel extends JPanel implements KeyListener {
     static int windowHeight = (windowWidth/16) * 9;
     Player player;
     Enemy enemy;
-
     World world;
     public Panel(Player player, Enemy enemy, World world){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
@@ -24,7 +23,7 @@ public class Panel extends JPanel implements KeyListener {
         fps();
 
         //draws player
-        g.fillRect((int)player.x,(int)player.y,(int)player.width,(int)player.height);
+        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,null);
 
         //draws world
         g.fillRect(0, world.floorLevel, windowWidth,10);

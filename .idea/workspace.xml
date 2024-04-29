@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="test">
-      <change afterPath="$PROJECT_DIR$/res/smiley.png" afterDir="false" />
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slutprojekt.iml" beforeDir="false" afterPath="$PROJECT_DIR$/slutprojekt.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AnimatedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
@@ -50,25 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt" />
@@ -128,7 +126,8 @@
       <workItem from="1714047615406" duration="5980000" />
       <workItem from="1714309651573" duration="3204000" />
       <workItem from="1714313477853" duration="6377000" />
-      <workItem from="1714377656743" duration="3530000" />
+      <workItem from="1714377656743" duration="3802000" />
+      <workItem from="1714387529525" duration="2913000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -234,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714324829337</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts">
+      <option name="closed" value="true" />
+      <created>1714381482428</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714381482428</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +259,8 @@
     <MESSAGE value="sxasda" />
     <MESSAGE value="bättre struktur" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/slutprojekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1710755468027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
