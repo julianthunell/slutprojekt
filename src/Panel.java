@@ -31,6 +31,7 @@ public class Panel extends JPanel implements KeyListener {
 
     }
     public void fps(){
+
         frames++;
         if(System.currentTimeMillis() - lastCheck >= 1000){
             lastCheck = System.currentTimeMillis();

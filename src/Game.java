@@ -16,12 +16,19 @@ public class Game implements Runnable {
         panel = new Panel(player,enemy,world);
         window = new Window(panel);
         panel.requestFocus();
+        startAnimationOjects();
         startGameloop();
     }
 
     //Updates all logic
     private void updateGame() {
         player.update();
+    }
+
+    //this method is used to set up the Animated objects to be ready for starting the game
+    private void startAnimationOjects(){
+        player.importImage();
+        player.setAnimationArray();
     }
 
     //thread for gameloop
@@ -39,19 +46,19 @@ public class Game implements Runnable {
         double timePerUpdate = 1000000000.0/ups;
         long lastFrame = System.nanoTime();
         long lastUpdate = System.nanoTime();
-        long now = System.nanoTime();
+        long now;
 
         //infinite loop
         while (true){
             now = System.nanoTime();
 
-            //update
+            //update if time passed since the last frame rendered is equal to the set fps
             if(now - lastUpdate >= timePerUpdate){
                 updateGame();
                 lastUpdate = now;
             }
 
-            //render
+            //render if time passed since the last frame rendered is equal to the set fps
             if(now - lastFrame >= timePerFrame){
                 panel.repaint();
                 lastFrame = now;
