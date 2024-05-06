@@ -1,6 +1,6 @@
 public class Player extends livingEntity{
     protected boolean down,up,left,right,dash;
-    private float yVel,xVel;
+    private float yVel;
     private float maxVel = 4.0F;
 
     public Player(float x, float y, int width, int height, char objectDir, World world ) {
@@ -37,6 +37,12 @@ public class Player extends livingEntity{
 
     @Override
     public void setStringLocation() {
+        location = "/test.png";
+    }
 
+    @Override
+    public void setImgSize() {
+        imgHeight = 50;
+        imgWidth = 50;
     }
 }

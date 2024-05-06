@@ -27,8 +27,15 @@ public class Game implements Runnable {
 
     //this method is used to set up the Animated objects to be ready for starting the game
     private void startAnimationOjects(){
+        player.setImgSize();
+        player.setStringLocation();
         player.importImage();
         player.setAnimationArray();
+
+        world.setImgSize();
+        world.setStringLocation();
+        world.importImage();
+        world.setAnimationArray();
     }
 
     //thread for gameloop

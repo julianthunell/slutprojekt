@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts">
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="mer ändringar">
+      <change afterPath="$PROJECT_DIR$/res/Background.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AnimatedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Window.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +60,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/res&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -69,10 +75,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt\res" />
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt\res" />
+      <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt\out\production\slutprojekt" />
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt" />
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt\default" />
     </key>
@@ -127,7 +135,11 @@
       <workItem from="1714309651573" duration="3204000" />
       <workItem from="1714313477853" duration="6377000" />
       <workItem from="1714377656743" duration="3802000" />
-      <workItem from="1714387529525" duration="2913000" />
+      <workItem from="1714387529525" duration="3192000" />
+      <workItem from="1714473540570" duration="1952000" />
+      <workItem from="1714979026724" duration="1453000" />
+      <workItem from="1714982288323" duration="60000" />
+      <workItem from="1715011843209" duration="2973000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -241,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714381482428</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="mer ändringar">
+      <option name="closed" value="true" />
+      <created>1714391100726</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714391100726</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +280,18 @@
     <MESSAGE value="bättre struktur" />
     <MESSAGE value="test" />
     <MESSAGE value="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts" />
+    <MESSAGE value="mer ändringar" />
+    <option name="LAST_COMMIT_MESSAGE" value="mer ändringar" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.awt.image.RasterFormatException" package="java.awt.image" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/slutprojekt$Main.ic" NAME="Main Coverage Results" MODIFIED="1710755468027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

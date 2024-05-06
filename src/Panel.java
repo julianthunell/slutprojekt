@@ -7,7 +7,7 @@ public class Panel extends JPanel implements KeyListener {
     static int windowWidth = 800;
     private long lastCheck = 0;
     private int frames = 0;
-    static int windowHeight = (windowWidth/16) * 9;
+    private int windowHeight = (windowWidth/16) * 9;
     Player player;
     Enemy enemy;
     World world;
@@ -21,13 +21,14 @@ public class Panel extends JPanel implements KeyListener {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         fps();
+        //background
+        g.drawImage(world.Animations[0][0],0,0,windowWidth,windowHeight,null);
 
         //draws player
         g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,null);
 
-        //draws world
+        //draws floor
         g.fillRect(0, world.floorLevel, windowWidth,10);
-
     }
     public void fps(){
 

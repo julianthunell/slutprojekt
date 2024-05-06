@@ -5,9 +5,12 @@ import java.io.InputStream;
 
 public abstract class AnimatedObject {
     public BufferedImage imageSheet;
-    private String location = "/smiley.png";
+    public String location = "/smiley.png";
     public BufferedImage[][] Animations;
     private int arrayHeight,arrayWidth;
+
+    public int imgHeight;
+    public int imgWidth;
 
     //This method is used to import the image used to display the animated object
     public void importImage(){
@@ -28,14 +31,19 @@ public abstract class AnimatedObject {
     //This method sets up the array including every part of the image.
     //It creates the array depending on the size of the image and then divides the image in to subimages
     public void setAnimationArray(){
-        arrayHeight = imageSheet.getHeight()/50;
-        arrayWidth = imageSheet.getWidth()/50;
+        System.out.println(imageSheet.getWidth());
+        System.out.println(imageSheet.getHeight());
+        arrayHeight = imageSheet.getHeight()/ imgHeight;
+        arrayWidth = imageSheet.getWidth()/ imgWidth;
 
+        if(arrayHeight == 0){
+            arrayHeight = 1;
+        }
         Animations = new BufferedImage[arrayWidth][arrayHeight];
 
         for (int i = 0; i < arrayHeight ; i++) {
             for (int j = 0; j < arrayWidth ; j++) {
-                Animations[j][i] = imageSheet.getSubimage(i*50,i*50,50,50);
+                Animations[j][i] = imageSheet.getSubimage(j* imgWidth,i* imgHeight, imgWidth, imgHeight);
             }
         }
 
@@ -44,4 +52,6 @@ public abstract class AnimatedObject {
     //This is a method that needs to be called
     //because a location for the imported image must be set
     public abstract void setStringLocation();
+
+    public abstract void setImgSize();
 }

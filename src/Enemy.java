@@ -12,4 +12,9 @@ public class Enemy extends livingEntity{
     public void setStringLocation() {
 
     }
+
+    @Override
+    public void setImgSize() {
+
+    }
 }
