@@ -36,9 +36,7 @@ public abstract class AnimatedObject {
         arrayHeight = imageSheet.getHeight()/ imgHeight;
         arrayWidth = imageSheet.getWidth()/ imgWidth;
 
-        if(arrayHeight == 0){
-            arrayHeight = 1;
-        }
+
         Animations = new BufferedImage[arrayWidth][arrayHeight];
 
         for (int i = 0; i < arrayHeight ; i++) {
@@ -49,9 +47,14 @@ public abstract class AnimatedObject {
 
     }
 
-    //This is a method that needs to be called
-    //because a location for the imported image must be set
+    //The following methods needs to be called
+
+    //location for the imported image must be set
     public abstract void setStringLocation();
 
+    //Image width and size
     public abstract void setImgSize();
+
+    //Initiates the properties for the animations
+    public abstract void setImageProperties();
 }

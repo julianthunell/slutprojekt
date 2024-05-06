@@ -5,8 +5,9 @@ public class Game implements Runnable {
     private final int fps = 60;
     private final int ups = 120;
     World world = new World (350);
-    Player player = new Player((Panel.windowWidth/2)-13,100,26,50,'R', world);
-    Enemy enemy = new Enemy(200,100,50,100,'R', world);
+    Enemy enemy = new Enemy(0,100,46,27,'R', world,panel);
+    Player player = new Player((400)-13,100,44,64,'R', world, enemy,panel);
+
 
 
     //Creating Gamewindow and Gamepanel
@@ -18,24 +19,22 @@ public class Game implements Runnable {
         window = new Window(panel);
         panel.requestFocus();
         startGameloop();
+
+        player.setHealth(5);
+        enemy.setDamage(1);
     }
 
     //Updates all logic
     private void updateGame() {
         player.update();
+        enemy.update();
     }
 
     //this method is used to set up the Animated objects to be ready for starting the game
     private void startAnimationOjects(){
-        player.setImgSize();
-        player.setStringLocation();
-        player.importImage();
-        player.setAnimationArray();
-
-        world.setImgSize();
-        world.setStringLocation();
-        world.importImage();
-        world.setAnimationArray();
+        player.setImageProperties();
+        world.setImageProperties();
+        enemy.setImageProperties();
     }
 
     //thread for gameloop

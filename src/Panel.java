@@ -4,10 +4,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Panel extends JPanel implements KeyListener {
-    static int windowWidth = 800;
+    public static int windowWidth = 800;
     private long lastCheck = 0;
     private int frames = 0;
     private int windowHeight = (windowWidth/16) * 9;
+    private int AnimationIndex = 0;
+    private int currentIndex = 0;
     Player player;
     Enemy enemy;
     World world;
@@ -20,16 +22,29 @@ public class Panel extends JPanel implements KeyListener {
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
+        AnimationUpdate();
         fps();
         //background
-        g.drawImage(world.Animations[0][0],0,0,windowWidth,windowHeight,null);
+        g.drawImage(world.Animations[AnimationIndex][0],0,0,windowWidth,windowHeight,null);
 
         //draws player
-        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,null);
+        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,44,64,null);
 
+        //draw enemy
+        g.drawImage(enemy.Animations[0][0],(int)enemy.x,(int)enemy.y,null);
         //draws floor
-        g.fillRect(0, world.floorLevel, windowWidth,10);
+        Color myColor = Color.decode("#02151C");
+        g.setColor(myColor);
+        g.fillRect(0, world.floorLevel, windowWidth,200);
+
+        //draw score
+        g.setColor(Color.white);
+        g.setFont(new Font("Arial",Font.BOLD,28));
+        g.drawString(String.valueOf(player.getHealth()),windowWidth/2,100);
+
     }
+
+    //Fps counter
     public void fps(){
 
         frames++;
@@ -40,6 +55,18 @@ public class Panel extends JPanel implements KeyListener {
         }
     }
 
+    //AnimationTicker
+    public int AnimationUpdate(){
+        currentIndex++;
+        if(currentIndex >= 5){
+            currentIndex = 0;
+            AnimationIndex++;
+        }
+        if(AnimationIndex == 31){
+            AnimationIndex = 0;
+        }
+        return AnimationIndex;
+    }
     public void keyTyped(KeyEvent e) {
 
     }

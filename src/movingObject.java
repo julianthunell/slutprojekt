@@ -1,22 +1,26 @@
 public abstract class movingObject extends AnimatedObject {
     //x and y position of the object
     float x;
+
     float y;
 
     //size of the object
     float width;
     float height;
 
-    //other characteristics
+    //other variables
     char objectDir;
     World world;
-    public movingObject(float x, float y, int width, int height, char objectDir, World world){
+
+    Panel panel;
+    public movingObject(float x, float y, int width, int height, char objectDir, World world, Panel panel){
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.objectDir = objectDir;
         this.world = world;
+        this.panel = panel;
 
     }
     //checks if object can move to chosen direction
@@ -28,7 +32,7 @@ public abstract class movingObject extends AnimatedObject {
                     return false;
                 break;
             case "right":
-                if (x >= Panel.windowWidth-width)
+                if (x >= panel.windowWidth-width)
                     return false;
                 break;
             case "down":
@@ -42,6 +46,22 @@ public abstract class movingObject extends AnimatedObject {
                 break;
         }
         return true;
+    }
+    //getters
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
+    }
+
+    public float getWidth() {
+        return width;
+    }
+
+    public float getHeight() {
+        return height;
     }
     //update function for logic
     public abstract void update();

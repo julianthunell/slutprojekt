@@ -2,14 +2,17 @@ public class Player extends livingEntity{
     protected boolean down,up,left,right,dash;
     private float yVel;
     private float maxVel = 4.0F;
+    Enemy enemy;
 
-    public Player(float x, float y, int width, int height, char objectDir, World world ) {
-        super(x, y, width, height,objectDir,world);
+    public Player(float x, float y, int width, int height, char objectDir, World world,Enemy enemy,Panel panel ) {
+        super(x, y, width, height,objectDir,world,panel);
+        this.enemy = enemy;
     }
 
     @Override
     public void update() {
         playerMove();
+        takeDamage();
     }
 
     private void playerMove(){
@@ -34,15 +37,28 @@ public class Player extends livingEntity{
             yVel = - 3;
         }
     }
+    public void takeDamage(){
+        if (x >= enemy.getX() && x <= enemy.getX()+enemy.getWidth() && y+height >= enemy.getY() && y+height <= enemy.getY()+enemy.getHeight()){
+            health -= enemy.getDamage();
+        }
+    }
 
     @Override
     public void setStringLocation() {
-        location = "/test.png";
+        location = "/Skeleton.png";
     }
 
     @Override
     public void setImgSize() {
-        imgHeight = 50;
-        imgWidth = 50;
+        imgHeight = 32;
+        imgWidth = 22;
+    }
+
+    @Override
+    public void setImageProperties() {
+        setImgSize();
+        setStringLocation();
+        importImage();
+        setAnimationArray();
     }
 }

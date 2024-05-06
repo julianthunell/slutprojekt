@@ -17,4 +17,12 @@ public class World extends AnimatedObject{
         imgWidth = 576;
         imgHeight = 324;
     }
+
+    @Override
+    public void setImageProperties() {
+        setImgSize();
+        setStringLocation();
+        importImage();
+        setAnimationArray();
+    }
 }
