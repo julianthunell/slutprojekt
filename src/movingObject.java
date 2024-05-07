@@ -23,6 +23,7 @@ public abstract class movingObject extends AnimatedObject {
         this.panel = panel;
 
     }
+
     //checks if object can move to chosen direction
     //Works by checking the current position of the object and seeing if it's outside the screen
     public boolean canMove(String direction){
@@ -62,6 +63,15 @@ public abstract class movingObject extends AnimatedObject {
 
     public float getHeight() {
         return height;
+    }
+
+    //setters
+    public void setX(float x) {
+        this.x = x;
+    }
+
+    public void setY(float y) {
+        this.y = y;
     }
     //update function for logic
     public abstract void update();

@@ -1,4 +1,5 @@
 public class Enemy extends livingEntity{
+
     private float yVel;
     private float xVel = 1;
     private float maxVel = 4.0F;
@@ -22,6 +23,14 @@ public class Enemy extends livingEntity{
             xVel *=-1;
         }
 
+    }
+
+    public float getxVel() {
+        return xVel;
+    }
+
+    public void setxVel(float xVel) {
+        this.xVel = xVel;
     }
 
     @Override

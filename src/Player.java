@@ -12,7 +12,16 @@ public class Player extends livingEntity{
     @Override
     public void update() {
         playerMove();
+        updateDirection();
         takeDamage();
+    }
+    public void updateDirection(){
+        if(objectDir == 'L'){
+            width = -44;
+        }
+        else if(objectDir == 'R'){
+            width = 44;
+        }
     }
 
     private void playerMove(){
@@ -40,6 +49,18 @@ public class Player extends livingEntity{
     public void takeDamage(){
         if (x >= enemy.getX() && x <= enemy.getX()+enemy.getWidth() && y+height >= enemy.getY() && y+height <= enemy.getY()+enemy.getHeight()){
             health -= enemy.getDamage();
+
+            x = 400;
+            y = 100;
+
+            enemy.setX(0);
+            if(enemy.getxVel() > 0){
+                enemy.setxVel(enemy.getxVel()+1);
+            }
+            else{
+                enemy.setxVel(enemy.getxVel()-1);
+                enemy.setxVel(enemy.getxVel()*-1);
+            }
         }
     }
 
@@ -60,5 +81,9 @@ public class Player extends livingEntity{
         setStringLocation();
         importImage();
         setAnimationArray();
+    }
+
+    public void setPanel(Panel panel) {
+        this.panel= panel;
     }
 }

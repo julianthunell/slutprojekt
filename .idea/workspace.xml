@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="bakgrund">
-      <change afterPath="$PROJECT_DIR$/res/Dead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/Skeleton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/test.png" afterDir="false" />
+    <list default="true" id="34f55abf-f665-4c1c-bb2e-980c2abb9d98" name="Changes" comment="final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AnimatedObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Enemy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Enemy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Panel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/World.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/livingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/livingEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/movingObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/movingObject.java" afterDir="false" />
     </list>
@@ -58,26 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/res",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/res&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/julian.thunellaxnas/IdeaProjects/slutprojekt/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\julian.thunellaxnas\IdeaProjects\slutprojekt\res" />
@@ -144,7 +140,8 @@
       <workItem from="1714473540570" duration="1952000" />
       <workItem from="1714979026724" duration="1453000" />
       <workItem from="1714982288323" duration="60000" />
-      <workItem from="1715011843209" duration="12154000" />
+      <workItem from="1715011843209" duration="12197000" />
+      <workItem from="1715076348956" duration="4975000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit">
       <option name="closed" value="true" />
@@ -274,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715016340652</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="sista">
+      <option name="closed" value="true" />
+      <created>1715026278628</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1715026278628</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +301,9 @@
     <MESSAGE value="fixat image importing. Varje animatedObject kan nu importera sin bild och en default bild ersätter ifall rätt bild inte ersätts" />
     <MESSAGE value="mer ändringar" />
     <MESSAGE value="bakgrund" />
-    <option name="LAST_COMMIT_MESSAGE" value="bakgrund" />
+    <MESSAGE value="sista" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

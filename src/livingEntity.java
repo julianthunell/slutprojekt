@@ -2,8 +2,8 @@ public abstract class livingEntity extends movingObject{
 
     int health;
     int damage;
-    public livingEntity(float x, float y, int width, int height, char objectDir, World world) {
-        super(x, y, width, height, objectDir, world);
+    public livingEntity(float x, float y, int width, int height, char objectDir, World world, Panel panel) {
+        super(x, y, width, height, objectDir, world, panel);
     }
     public int getDamage() {
         return damage;

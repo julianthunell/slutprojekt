@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public abstract class AnimatedObject {
-    public BufferedImage imageSheet;
-    public String location = "/smiley.png";
-    public BufferedImage[][] Animations;
+    protected BufferedImage imageSheet;
+    protected String location = "/smiley.png";
+    protected BufferedImage[][] Animations;
     private int arrayHeight,arrayWidth;
 
     public int imgHeight;
@@ -31,8 +31,6 @@ public abstract class AnimatedObject {
     //This method sets up the array including every part of the image.
     //It creates the array depending on the size of the image and then divides the image in to subimages
     public void setAnimationArray(){
-        System.out.println(imageSheet.getWidth());
-        System.out.println(imageSheet.getHeight());
         arrayHeight = imageSheet.getHeight()/ imgHeight;
         arrayWidth = imageSheet.getWidth()/ imgWidth;
 
@@ -44,7 +42,6 @@ public abstract class AnimatedObject {
                 Animations[j][i] = imageSheet.getSubimage(j* imgWidth,i* imgHeight, imgWidth, imgHeight);
             }
         }
-
     }
 
     //The following methods needs to be called

@@ -8,8 +8,6 @@ public class Game implements Runnable {
     Enemy enemy = new Enemy(0,100,46,27,'R', world,panel);
     Player player = new Player((400)-13,100,44,64,'R', world, enemy,panel);
 
-
-
     //Creating Gamewindow and Gamepanel
     //Sending the objects
     //starting the game

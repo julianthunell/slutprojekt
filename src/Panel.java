@@ -4,10 +4,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Panel extends JPanel implements KeyListener {
-    public static int windowWidth = 800;
+    public int windowWidth = 800;
     private long lastCheck = 0;
     private int frames = 0;
     private int windowHeight = (windowWidth/16) * 9;
+
+    private int score = 0;
     private int AnimationIndex = 0;
     private int currentIndex = 0;
     Player player;
@@ -19,6 +21,7 @@ public class Panel extends JPanel implements KeyListener {
         this.player = player;
         this.enemy = enemy;
         this.world = world;
+        this.player.setPanel(this);
     }
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -28,7 +31,7 @@ public class Panel extends JPanel implements KeyListener {
         g.drawImage(world.Animations[AnimationIndex][0],0,0,windowWidth,windowHeight,null);
 
         //draws player
-        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,44,64,null);
+        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,(int)player.getWidth(),64,null);
 
         //draw enemy
         g.drawImage(enemy.Animations[0][0],(int)enemy.x,(int)enemy.y,null);
@@ -41,12 +44,12 @@ public class Panel extends JPanel implements KeyListener {
         g.setColor(Color.white);
         g.setFont(new Font("Arial",Font.BOLD,28));
         g.drawString(String.valueOf(player.getHealth()),windowWidth/2,100);
+        g.drawString(String.valueOf(score),30,60);
 
     }
 
     //Fps counter
     public void fps(){
-
         frames++;
         if(System.currentTimeMillis() - lastCheck >= 1000){
             lastCheck = System.currentTimeMillis();
@@ -54,9 +57,26 @@ public class Panel extends JPanel implements KeyListener {
             frames = 0;
         }
     }
+    //ends game when health is 0
+    //Reset all values
+    public void endGame(){
+        if(player.getHealth() <= 0){
+            score = 0;
+
+            player.setHealth(5);
+
+            enemy.setX(0);
+            enemy.setxVel(1);
+
+            player.setX(400);
+            player.setY(100);
+        }
+    }
 
     //AnimationTicker
     public int AnimationUpdate(){
+        endGame();
+        score++;
         currentIndex++;
         if(currentIndex >= 5){
             currentIndex = 0;
