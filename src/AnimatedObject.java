@@ -6,11 +6,11 @@ import java.io.InputStream;
 public abstract class AnimatedObject {
     protected BufferedImage imageSheet;
     protected String location = "/smiley.png";
-    protected BufferedImage[][] Animations;
+    protected BufferedImage[][] animations;
     private int arrayHeight,arrayWidth;
 
-    public int imgHeight;
-    public int imgWidth;
+    protected int imgHeight;
+    protected int imgWidth;
 
     //This method is used to import the image used to display the animated object
     public void importImage(){
@@ -35,11 +35,11 @@ public abstract class AnimatedObject {
         arrayWidth = imageSheet.getWidth()/ imgWidth;
 
 
-        Animations = new BufferedImage[arrayWidth][arrayHeight];
+        animations = new BufferedImage[arrayWidth][arrayHeight];
 
         for (int i = 0; i < arrayHeight ; i++) {
             for (int j = 0; j < arrayWidth ; j++) {
-                Animations[j][i] = imageSheet.getSubimage(j* imgWidth,i* imgHeight, imgWidth, imgHeight);
+                animations[j][i] = imageSheet.getSubimage(j* imgWidth,i* imgHeight, imgWidth, imgHeight);
             }
         }
     }

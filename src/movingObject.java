@@ -1,15 +1,15 @@
 public abstract class movingObject extends AnimatedObject {
     //x and y position of the object
-    float x;
+    protected float x;
 
-    float y;
+    protected float y;
 
     //size of the object
-    float width;
-    float height;
+    protected float width;
+    protected float height;
 
     //other variables
-    char objectDir;
+    protected char objectDir;
     World world;
 
     Panel panel;
@@ -33,15 +33,15 @@ public abstract class movingObject extends AnimatedObject {
                     return false;
                 break;
             case "right":
-                if (x >= panel.windowWidth-width)
+                if (x >= panel.getWindowWidth()-width)
                     return false;
                 break;
             case "down":
-                if (y >= world.floorLevel-height)
+                if (y >= world.getFloorLevel()-height)
                     return false;
                 break;
             case "up":
-                if (y < world.floorLevel-height-1) {
+                if (y < world.getFloorLevel()-height-1) {
                     return false;
                 }
                 break;

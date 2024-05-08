@@ -4,7 +4,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Panel extends JPanel implements KeyListener {
-    public int windowWidth = 800;
+
+    private int windowWidth = 800;
     private long lastCheck = 0;
     private int frames = 0;
     private int windowHeight = (windowWidth/16) * 9;
@@ -28,17 +29,17 @@ public class Panel extends JPanel implements KeyListener {
         AnimationUpdate();
         fps();
         //background
-        g.drawImage(world.Animations[AnimationIndex][0],0,0,windowWidth,windowHeight,null);
+        g.drawImage(world.animations[AnimationIndex][0],0,0,windowWidth,windowHeight,null);
 
         //draws player
-        g.drawImage(player.Animations[0][0],(int)player.x,(int)player.y,(int)player.getWidth(),64,null);
+        g.drawImage(player.animations[0][0],(int)player.x,(int)player.y,(int)player.getWidth(),64,null);
 
         //draw enemy
-        g.drawImage(enemy.Animations[0][0],(int)enemy.x,(int)enemy.y,null);
+        g.drawImage(enemy.animations[0][0],(int)enemy.x,(int)enemy.y,null);
         //draws floor
         Color myColor = Color.decode("#02151C");
         g.setColor(myColor);
-        g.fillRect(0, world.floorLevel, windowWidth,200);
+        g.fillRect(0, world.getFloorLevel(), windowWidth,200);
 
         //draw score
         g.setColor(Color.white);
@@ -135,5 +136,10 @@ public class Panel extends JPanel implements KeyListener {
                 player.dash = false;
                 break;
         }
+    }
+
+    //getter setters
+    public int getWindowWidth() {
+        return windowWidth;
     }
 }

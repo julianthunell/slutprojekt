@@ -1,7 +1,7 @@
 public class World extends AnimatedObject{
 
     //Variables for world
-    int floorLevel;
+    private int floorLevel;
 
     public World(int floorLevel){
         this.floorLevel = floorLevel;
@@ -24,5 +24,12 @@ public class World extends AnimatedObject{
         setStringLocation();
         importImage();
         setAnimationArray();
+    }
+    //getters setters
+    public int getFloorLevel() {
+        return floorLevel;
+    }
+    public void setFloorLevel(int floorLevel) {
+        this.floorLevel = floorLevel;
     }
 }
