@@ -17,7 +17,7 @@ public class Player extends livingEntity{
     }
 
     //Changes player direction
-    protected void updateDirection(){
+    private void updateDirection(){
         if(objectDir == 'L'){
             width = -44;
         }
@@ -49,7 +49,7 @@ public class Player extends livingEntity{
         }
     }
     //Calculates if damage has been taken and changes health.
-    protected void takeDamage(){
+    private void takeDamage(){
         if (x >= enemy.getX() && x <= enemy.getX()+enemy.getWidth() && y+height >= enemy.getY() && y+height <= enemy.getY()+enemy.getHeight()){
             health -= enemy.getDamage();
 
@@ -57,7 +57,7 @@ public class Player extends livingEntity{
         }
     }
     //resets positions and changes velocity
-    protected void resetVariables(){
+    private void resetVariables(){
         x = 400;
         y = 100;
 
