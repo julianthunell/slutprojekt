@@ -8,28 +8,28 @@ public class World extends AnimatedObject{
     }
 
     @Override
-    public void setStringLocation() {
+    protected void setStringLocation() {
         location = "/Background.png";
     }
 
     @Override
-    public void setImgSize() {
+    protected void setImgSize() {
         imgWidth = 576;
         imgHeight = 324;
     }
 
     @Override
-    public void setImageProperties() {
+    protected void setImageProperties() {
         setImgSize();
         setStringLocation();
         importImage();
         setAnimationArray();
     }
     //getters setters
-    public int getFloorLevel() {
+    protected int getFloorLevel() {
         return floorLevel;
     }
-    public void setFloorLevel(int floorLevel) {
+    protected void setFloorLevel(int floorLevel) {
         this.floorLevel = floorLevel;
     }
 }

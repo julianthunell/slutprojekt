@@ -13,7 +13,7 @@ public abstract class AnimatedObject {
     protected int imgWidth;
 
     //This method is used to import the image used to display the animated object
-    public void importImage(){
+    protected void importImage(){
         InputStream imageStream = getClass().getResourceAsStream(location);
 
         try{
@@ -30,7 +30,7 @@ public abstract class AnimatedObject {
     }
     //This method sets up the array including every part of the image.
     //It creates the array depending on the size of the image and then divides the image in to subimages
-    public void setAnimationArray(){
+    protected void setAnimationArray(){
         arrayHeight = imageSheet.getHeight()/ imgHeight;
         arrayWidth = imageSheet.getWidth()/ imgWidth;
 
@@ -47,11 +47,11 @@ public abstract class AnimatedObject {
     //The following methods needs to be called
 
     //location for the imported image must be set
-    public abstract void setStringLocation();
+    protected abstract void setStringLocation();
 
     //Image width and size
-    public abstract void setImgSize();
+    protected abstract void setImgSize();
 
     //Initiates the properties for the animations
-    public abstract void setImageProperties();
+    protected abstract void setImageProperties();
 }

@@ -13,7 +13,7 @@ public abstract class movingObject extends AnimatedObject {
     World world;
 
     Panel panel;
-    public movingObject(float x, float y, int width, int height, char objectDir, World world, Panel panel){
+    protected movingObject(float x, float y, int width, int height, char objectDir, World world, Panel panel){
         this.x = x;
         this.y = y;
         this.width = width;
@@ -26,7 +26,7 @@ public abstract class movingObject extends AnimatedObject {
 
     //checks if object can move to chosen direction
     //Works by checking the current position of the object and seeing if it's outside the screen
-    public boolean canMove(String direction){
+    protected boolean canMove(String direction){
         switch (direction){
             case "left":
                 if (x < 0)
@@ -49,31 +49,31 @@ public abstract class movingObject extends AnimatedObject {
         return true;
     }
     //getters
-    public float getX() {
+    protected float getX() {
         return x;
     }
 
-    public float getY() {
+    protected float getY() {
         return y;
     }
 
-    public float getWidth() {
+    protected float getWidth() {
         return width;
     }
 
-    public float getHeight() {
+    protected float getHeight() {
         return height;
     }
 
     //setters
-    public void setX(float x) {
+    protected void setX(float x) {
         this.x = x;
     }
 
-    public void setY(float y) {
+    protected void setY(float y) {
         this.y = y;
     }
     //update function for logic
-    public abstract void update();
+    protected abstract void update();
 
 }

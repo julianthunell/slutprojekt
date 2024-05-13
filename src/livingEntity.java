@@ -2,20 +2,22 @@ public abstract class livingEntity extends movingObject{
 
     protected int health;
     protected int damage;
-    public livingEntity(float x, float y, int width, int height, char objectDir, World world, Panel panel) {
+    protected livingEntity(float x, float y, int width, int height, char objectDir, World world, Panel panel) {
         super(x, y, width, height, objectDir, world, panel);
     }
-    public int getDamage() {
+
+    //getters and setters
+    protected int getDamage() {
         return damage;
     }
-    public int getHealth() {
+    protected int getHealth() {
         return health;
     }
-    public void setHealth(int health) {
+    protected void setHealth(int health) {
         this.health = health;
     }
 
-    public void setDamage(int damage) {
+    protected void setDamage(int damage) {
         this.damage = damage;
     }
 

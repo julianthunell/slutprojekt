@@ -7,7 +7,6 @@ public class Panel extends JPanel implements KeyListener {
 
     private int windowWidth = 800;
     private long lastCheck = 0;
-    private int frames = 0;
     private int windowHeight = (windowWidth/16) * 9;
 
     private int score = 0;
@@ -24,10 +23,11 @@ public class Panel extends JPanel implements KeyListener {
         this.world = world;
         this.player.setPanel(this);
     }
-    public void paintComponent(Graphics g){
+    //Paint component - method that paints all objects
+    //Updates animation index
+    protected void paintComponent(Graphics g){
         super.paintComponent(g);
         AnimationUpdate();
-        fps();
         //background
         g.drawImage(world.animations[AnimationIndex][0],0,0,windowWidth,windowHeight,null);
 
@@ -49,18 +49,9 @@ public class Panel extends JPanel implements KeyListener {
 
     }
 
-    //Fps counter
-    public void fps(){
-        frames++;
-        if(System.currentTimeMillis() - lastCheck >= 1000){
-            lastCheck = System.currentTimeMillis();
-            System.out.println("Fps: "+frames);
-            frames = 0;
-        }
-    }
     //ends game when health is 0
     //Reset all values
-    public void endGame(){
+    private void endGame(){
         if(player.getHealth() <= 0){
             score = 0;
 
@@ -75,7 +66,7 @@ public class Panel extends JPanel implements KeyListener {
     }
 
     //AnimationTicker
-    public int AnimationUpdate(){
+    private int AnimationUpdate(){
         endGame();
         score++;
         currentIndex++;
@@ -92,6 +83,7 @@ public class Panel extends JPanel implements KeyListener {
 
     }
 
+    //Controls key presses
     public void keyPressed(KeyEvent e) {
         int input = (e.getKeyCode());
         //starts movement depending on direction
@@ -139,7 +131,7 @@ public class Panel extends JPanel implements KeyListener {
     }
 
     //getter setters
-    public int getWindowWidth() {
+    protected int getWindowWidth() {
         return windowWidth;
     }
 }

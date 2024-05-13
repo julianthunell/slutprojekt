@@ -10,12 +10,14 @@ public class Player extends livingEntity{
     }
 
     @Override
-    public void update() {
+    protected void update() {
         playerMove();
         updateDirection();
         takeDamage();
     }
-    public void updateDirection(){
+
+    //Changes player direction
+    protected void updateDirection(){
         if(objectDir == 'L'){
             width = -44;
         }
@@ -23,7 +25,7 @@ public class Player extends livingEntity{
             width = 44;
         }
     }
-
+    //Calculates and changes the position of player
     private void playerMove(){
         y += yVel;
         //Gravity
@@ -46,43 +48,48 @@ public class Player extends livingEntity{
             yVel = - 3;
         }
     }
-    public void takeDamage(){
+    //Calculates if damage has been taken and changes health.
+    protected void takeDamage(){
         if (x >= enemy.getX() && x <= enemy.getX()+enemy.getWidth() && y+height >= enemy.getY() && y+height <= enemy.getY()+enemy.getHeight()){
             health -= enemy.getDamage();
 
-            x = 400;
-            y = 100;
+            resetVariables();
+        }
+    }
+    //resets positions and changes velocity
+    protected void resetVariables(){
+        x = 400;
+        y = 100;
 
-            enemy.setX(0);
-            if(enemy.getxVel() > 0){
-                enemy.setxVel(enemy.getxVel()+1);
-            }
-            else{
-                enemy.setxVel(enemy.getxVel()-1);
-                enemy.setxVel(enemy.getxVel()*-1);
-            }
+        enemy.setX(0);
+        if(enemy.getxVel() > 0){
+            enemy.setxVel(enemy.getxVel()+1);
+        }
+        else{
+            enemy.setxVel(enemy.getxVel()-1);
+            enemy.setxVel(enemy.getxVel()*-1);
         }
     }
 
     @Override
-    public void setStringLocation() {
+    protected void setStringLocation() {
         location = "/Skeleton.png";
     }
 
     @Override
-    public void setImgSize() {
+    protected void setImgSize() {
         imgHeight = 32;
         imgWidth = 22;
     }
 
     @Override
-    public void setImageProperties() {
+    protected void setImageProperties() {
         setImgSize();
         setStringLocation();
         importImage();
         setAnimationArray();
     }
-
+    // declares panel
     public void setPanel(Panel panel) {
         this.panel= panel;
     }
