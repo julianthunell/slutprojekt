@@ -89,7 +89,7 @@ public class Player extends livingEntity{
         importImage();
         setAnimationArray();
     }
-    // declares panel
+    //declares panel
     public void setPanel(Panel panel) {
         this.panel= panel;
     }

@@ -8,7 +8,6 @@ public abstract class AnimatedObject {
     protected String location = "/smiley.png";
     protected BufferedImage[][] animations;
     private int arrayHeight,arrayWidth;
-
     protected int imgHeight;
     protected int imgWidth;
 

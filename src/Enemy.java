@@ -25,11 +25,11 @@ public class Enemy extends livingEntity{
 
     }
 
-    public float getxVel() {
+    protected float getxVel() {
         return xVel;
     }
 
-    public void setxVel(float xVel) {
+    protected void setxVel(float xVel) {
         this.xVel = xVel;
     }
 

@@ -15,6 +15,7 @@ public class Panel extends JPanel implements KeyListener {
     Player player;
     Enemy enemy;
     World world;
+    Score <Integer> topScore = new Score<>(0);
     public Panel(Player player, Enemy enemy, World world){
         this.setPreferredSize(new Dimension(windowWidth, windowHeight));
         this.addKeyListener(this);
@@ -46,6 +47,11 @@ public class Panel extends JPanel implements KeyListener {
         g.setFont(new Font("Arial",Font.BOLD,28));
         g.drawString(String.valueOf(player.getHealth()),windowWidth/2,100);
         g.drawString(String.valueOf(score),30,60);
+        g.setFont(new Font("Arial",Font.BOLD,15));
+        g.drawString(String.valueOf("High score: "+ topScore.get()),600,60);
+
+        //draw instructions
+        g.drawString("Avoid the slime, use 'WASD' to move",300,20);
 
     }
 
@@ -53,6 +59,7 @@ public class Panel extends JPanel implements KeyListener {
     //Reset all values
     private void endGame(){
         if(player.getHealth() <= 0){
+            topScore.updateHighScore(score);
             score = 0;
 
             player.setHealth(5);
